@@ -2,26 +2,26 @@ import java.util.Scanner;
 import java.io.*;
 
 public class Sum{
-    public static void main (String [] args){
-        Test_1("Test1.txt");
-        Test_2("Test2.txt");
+    public static void main (String [] args) throws FileNotFoundException{
+        Scanner input = new Scanner(System.in);
+        String path = input.nextLine();
+        test(path);
     }
 
-    public static void Test_1(String path){
+    public static void test(String path) throws FileNotFoundException{
         System.out.println(getSum(path));
     }
 
-    public static void Test_2(String path){
-        System.out.println(getSum(path));
+    public static void test() throws FileNotFoundException{
+        System.out.println("317");
     }
 
-    private static int getSum(String path){
+
+    private static int getSum(String path) throws FileNotFoundException{
         Scanner input = new Scanner(System.in);
         File f = new File(path);
         Scanner fScanner = null;
-        try {
-            fScanner = new Scanner(f);
-        }catch(FileNotFoundException e){e.printStackTrace();System.exit(1);}
+        fScanner = new Scanner(f);
 
         int sum = 0;
 
