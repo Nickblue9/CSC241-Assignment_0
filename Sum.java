@@ -17,5 +17,6 @@ class Sum{
             e.printStackTrace();
         }
         System.out.println(sum);
+        
     }
 }
